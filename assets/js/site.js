@@ -43,6 +43,7 @@ document.addEventListener("DOMContentLoaded", async () => {
     { key: "video_url", label: "Video" },
     { key: "slides_url", label: "Slides" },
     { key: "poster_url", label: "Poster" },
+    { key: "user_study_url", label: "User Study" },
   ];
 
   function escapeHtml(s) {
@@ -97,7 +98,7 @@ document.addEventListener("DOMContentLoaded", async () => {
       // Avoid duplicate URLs across different keys
       const url = String(val).trim();
       if (!url) continue;
-      if (items.some(x => x.url === url)) continue;
+      // if (items.some(x => x.url === url)) continue;
 
       items.push({ label: spec.label, url });
     }
@@ -108,7 +109,7 @@ document.addEventListener("DOMContentLoaded", async () => {
     const linksHtml = items
       .map(
         (x) =>
-          `<a href="${escapeHtml(x.url)}" target="_blank" rel="noopener">${escapeHtml(x.label)}</a>`
+          `<a href="${escapeHtml(x.url)}" target="_blank" rel="noopener">[${escapeHtml(x.label)}]</a>`
       )
       .join(`<span class="text-muted mx-1">·</span>`);
 
@@ -122,15 +123,16 @@ document.addEventListener("DOMContentLoaded", async () => {
 
     const entries = bibtexParse.toJSON(bibtexText);
 
+    entries.reverse();
     // Sort by year desc; tie-breaker by title
-    entries.sort((a, b) => {
-      const ya = parseInt(a.entryTags?.year || "0", 10);
-      const yb = parseInt(b.entryTags?.year || "0", 10);
-      if (yb !== ya) return yb - ya;
-      const ta = (a.entryTags?.title || "").toLowerCase();
-      const tb = (b.entryTags?.title || "").toLowerCase();
-      return ta.localeCompare(tb);
-    });
+    // entries.sort((a, b) => {
+    //   const ya = parseInt(a.entryTags?.year || "0", 10);
+    //   const yb = parseInt(b.entryTags?.year || "0", 10);
+    //   if (yb !== ya) return yb - ya;
+    //   const ta = (a.entryTags?.title || "").toLowerCase();
+    //   const tb = (b.entryTags?.title || "").toLowerCase();
+    //   return ta.localeCompare(tb);
+    // });
 
     container.innerHTML = "";
 

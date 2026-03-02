@@ -1,14 +1,261 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Philipp Christmann</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Philipp Christmann</title>
+  <meta name="description" content="Personal homepage of Philipp Christmann (MPI-INF)" />
+
+  <!-- Bootstrap CSS (CDN) -->
+  <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+    crossorigin="anonymous"
+  />
+
+  <!-- Bootstrap Icons -->
+  <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+  />
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="assets/css/site.css" />
 </head>
+
 <body>
+  <a class="visually-hidden-focusable" href="#content">Skip to content</a>
 
-<h1>Philipp</h1>
-Test
+  <!-- Top bar / header -->
+  <header class="border-bottom sticky-top">
+    <nav class="navbar navbar-expand-lg container py-2">
+      <a class="navbar-brand fw-semibold" href="#">Philipp Christmann</a>
 
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#nav"
+        aria-controls="nav"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="nav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="#research">Research</a></li>
+          <li class="nav-item"><a class="nav-link" href="#publications">Publications</a></li>
+          <li class="nav-item"><a class="nav-link" href="#activities">Activities</a></li>
+          <li class="nav-item"><a class="nav-link" href="#links">Links</a></li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+
+  <main id="content" class="container my-5">
+    <section class="row g-4 align-items-start">
+
+        <!-- Image -->
+        <div class="col-12 col-md-2 text-center text-md-start">
+            <img 
+            src="assets/img/profile.jpg"
+            alt="Image of Philipp Christmann"
+            class="img-fluid rounded-circle shadow-sm"
+            style="max-width: 150px;"
+            />
+        </div>
+
+        <!-- Main info -->
+        <div class="col-12 col-md-5">
+            <h1 class="display-6 mb-2">Philipp Christmann</h1>
+            <p class="lead text-muted mb-3">
+            PostDoc @ <a href="https://cispa.de/en" target="_blank" rel="noopener">CISPA</a>
+            </p>
+
+            <div class="d-flex flex-wrap gap-2">
+                <a class="btn btn prim-color" href="#publications">
+                    <i class="bi bi-journal-text me-1"></i> Publications
+                </a>
+                <a class="btn btn-outline-secondary" href="https://scholar.google.de/citations?user=AS874sUAAAAJ" target="_blank" rel="noopener">
+                    <i class="bi bi-mortarboard me-1"></i> Google Scholar
+                </a>
+                <a class="btn btn-outline-secondary" href="https://www.linkedin.com/in/philipp-christmann-1577b2191/" target="_blank" rel="noopener">
+                    <i class="bi bi-linkedin me-1"></i> LinkedIn
+                </a>
+            </div>
+        </div>
+
+        <!-- Contact card -->
+        <div class="col-12 col-md-5">
+            <div class="card shadow-sm contact-card">
+                <div class="card-body">
+                    <h2 class="h5 card-title mb-3 b">Contact</h2>
+                    <ul class="list-unstyled mb-0">
+                    <li class="mb-2">
+                        <span class="contact-key">Email:</span>
+                        <span class="contact-value">
+                            <span id="email"></span>
+                        </span>
+                    </li>
+                    <li class="mb-2">
+                        <span class="contact-key">Affiliation:</span>
+                        <span class="contact-value">
+                            CISPA Helmholtz Center for Information Security
+                        </span>
+                    </li>
+                    <li>
+                        <span class="contact-key">Location:</span>
+                        <span class="contact-value">
+                            Saarbrücken, Germany
+                        </span>
+                    </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+    <hr class="my-5" />
+
+    <!-- About -->
+    <section id="about" class="section">
+      <h2 class="h3 mb-3">About</h2>
+      <p>
+        Philipp Christmann is a postdoctoral researcher at the CISPA Helmholtz Center for Information Security, advised by Mario Fritz.
+        His research focus is on the interaction between large language models (LLMs) and tools, addressing challenges related to factuality, security, and traceability.
+      </p>
+      <p class="mb-0">
+        Philipp obtained his PhD with highest honors (<i>summa cum laude</i>) from the Max Planck Institute for Informatics and Saarland University,
+        where he was supervised by Gerhard Weikum and Rishiraj Saha Roy.
+        During my PhD, my research was on the intersection of information retrieval, natural language processing, and knowledge graphs.
+      </p>
+    </section>
+
+    <!-- Research -->
+    <section id="research" class="section mt-5">
+      <h2 class="h3 mb-3">Research Interests</h2>
+      <div class="row g-3">
+        <div class="col-12 col-md-4">
+          <div class="card h-100 shadow-sm">
+            <div class="card-body">
+              <h3 class="h6">Question Answering</h3>
+              <p class="mb-0 text-muted">Conversational QA, long-form QA, complex QA.</p>
+            </div>
+          </div>
+        </div>
+        
+        <div class="col-12 col-md-4">
+          <div class="card h-100 shadow-sm">
+            <div class="card-body">
+              <h3 class="h6">NLP</h3>
+              <p class="mb-0 text-muted">LLMs, agentic frameworks, transparency.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-12 col-md-4">
+          <div class="card h-100 shadow-sm">
+            <div class="card-body">
+              <h3 class="h6">Knowledge Graphs</h3>
+              <p class="mb-0 text-muted">Linking, reasoning, heterogeneous sources.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Publications (demo structure only) -->
+    <section id="publications" class="section mt-5">
+      <div class="d-flex flex-wrap align-items-baseline justify-content-between gap-2">
+        <h2 class="h3 mb-0">Publications</h2>
+      </div>
+
+      <div class="mt-3">
+        <ol class="publist" id="publist">
+          <!-- LOADED VIA JS -->
+        </ol>
+      </div>
+    </section>
+
+    <!-- Activities (demo structure only) -->
+    <section id="activities" class="section mt-5">
+      <h2 class="h3 mb-3">Professional Activities</h2>
+      <ul class="mb-0">
+        <li>
+          Part of the organizing team for the <a href="https://scai.info">SCAI workshop</a> at SIGIR 2026.
+        </li>
+        <li>
+          Journal reviewer:
+          <ul class="mb-0">
+          <li>TKDD (2026)</li>
+          <li>TOIS (2022, 2023)</li>
+          </ul>
+        </li>
+        <li>
+          Program committee member:
+          <ul class="mb-0">
+          <li>SIGIR 2025</li>
+          <li>ECIR 2025</li>
+          <li>ECIR 2025</li>
+          <li><a href="https://www2026.thewebconf.org">WWW 2026</a> (long paper track)</li>
+          <li><a href="https://sigir2026.org">SIGIR 2026</a> (long paper track)</li>
+          <li><a href="https://cikm2025.org">WSDM 2026</a> (long paper track, resource track)</li>
+          <li><a href="https://ecir2026.eu">ECIR 2026</a> (long paper track)</li>
+          <li><a href="https://cikm2025.org">CIKM 2025</a> (resource track)</li>
+          <li><a href="https://sigir2025.dei.unipd.it">SIGIR 2025</a> (long & short paper tracks)</li>
+          <li><a href="https://ecir2025.eu">ECIR 2025</a> (long & short paper tracks)</li>
+          <li><a href="https://cikm2024.org">CIKM 2024</a> (short paper track)</li>
+          <li><a href="https://sigir.org/sigir2024/">SIGIR 2024</a> (long & short paper tracks)</li>
+          <li><a href="https://uobevents.eventsair.com/cikm2023/">CIKM 2023</a> (applied research track)</li>
+          <li><a href="https://sigir.org/sigir2023/">SIGIR 2023</a> (short paper track)</li>
+          <li><a href="https://kdd.org/kdd2023/">KDD 2023</a> (applied science track)</li>
+          <li><a href="http://sigkg.cn/ccks2022/">CCKS 2022</a> (applied science track)</li>
+          <li><a href="https://www.cikm2022.org">CIKM 2022</a> (short paper track)</li>
+          <li><a href="https://kdd.org/kdd2022/">KDD 2022</a> (applied science track)</li>
+          <li><a href="https://www.wsdm-conference.org/2022/#">WSDM 2022</a> (long paper track) - featuring among 21 outstanding PC members</li>
+          <li><a href="https://www.cikm2021.org">CIKM 2021</a> (short paper track)</li>
+          <li><a href="http://www.cikmconference.org">CIKM 2020</a> (short paper track)</li>
+          </ul>
+      </ul>
+    </section>
+
+    <!-- Links -->
+    <section id="links" class="section mt-5">
+      <h2 class="h3 mb-3">Links</h2>
+      <ul class="mb-0">
+        <li><a href="#" target="_blank" rel="noopener">Curriculum Vitae (PDF)</a></li>
+        <li><a href="https://scholar.google.de/citations?user=AS874sUAAAAJ" target="_blank" rel="noopener">Google Scholar</a></li>
+        <li><a href="https://dblp.org/pid/250/2789.html" target="_blank" rel="noopener">DBLP</a></li>
+        <li><a href="https://github.com/PhilippChr" target="_blank" rel="noopener">GitHub</a></li>
+        <li><a href="https://www.linkedin.com/in/philipp-christmann-1577b2191/" target="_blank" rel="noopener">LinkedIn</a></li>
+      </ul>
+    </section>
+  </main>
+
+  <footer class="border-top">
+    <div class="container py-4 small text-muted">
+      <div class="d-flex flex-wrap justify-content-between gap-2">
+        <span>© <span id="year"></span> Philipp Christmann</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Bootstrap JS bundle (CDN) -->
+  <script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+    crossorigin="anonymous"
+  ></script>
+
+  <!-- BibTeX parser -->
+  <script src="https://cdn.jsdelivr.net/npm/bibtex-parse-js@0.0.24/bibtexParse.min.js"></script>
+  
+  <!-- Custom JS -->
+  <script src="assets/js/site.js"></script>
 </body>
 </html>

@@ -1,0 +1,103 @@
+/* Color schema */
+:root {
+  /* --pc-primary: #2f5ab7; */
+  /* --pc-primary: #6d8eba; */
+  --pc-primary: #2e64aa;
+  --pc-secondary: #2f5ab7;
+  --pc-accent: #EFF6FF;
+  --pc-link: #0645AD;
+}
+
+/* Basic styles */
+.prim-color {
+  background-color: var(--pc-primary);
+  color: var(--pc-accent);
+}
+.b {
+  font-weight: bold;
+}
+
+
+/* Base link color */
+a {
+  color: var(--pc-link);
+  text-decoration: none;
+}
+
+/* Hover */
+a:hover {
+  color: var(--pc-link);
+  text-decoration: underline;
+}
+
+/* Navbar */
+header {
+  background-color: var(--pc-primary);
+}
+.navbar {
+  background-color: var(--pc-primary);
+}
+.navbar .navbar-brand,
+.navbar .nav-link {
+  color: white !important;
+}
+
+.navbar .nav-link:hover {
+  color: var(accent) !important;
+}
+
+/* Slightly tighter section spacing on large screens */
+.section {
+  scroll-margin-top: 90px; /* for sticky header anchor jumps */
+}
+
+/* Contact Card */
+.contact-card {
+  /* background-color: var(--pc-accent); */
+  background-color: var(--pc-primary);
+  color: var(--pc-accent);
+  border: none;
+}
+.contact-value {
+  font-style: italic;
+}
+.contact-key {
+  font-weight: bold;
+}
+
+/* Publications */
+.publist {
+  padding-left: 1.25rem;
+  margin: 0;
+}
+
+.pubitem {
+  padding: 0.9rem 0;
+  border-bottom: 1px solid rgba(0,0,0,0.08);
+}
+
+.pubitem:last-child {
+  border-bottom: 0;
+}
+
+.pubtitle {
+  font-weight: 600;
+  margin-bottom: 0.15rem;
+}
+
+.pubmeta {
+  color: rgba(0,0,0,0.65);
+  font-size: 0.95rem;
+}
+
+.publinks {
+  font-size: 0.95rem;
+}
+
+.publinks a {
+  text-decoration: none;
+}
+
+.publinks a:hover {
+  text-decoration: underline;
+}

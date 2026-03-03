@@ -101,3 +101,18 @@ header {
 .publinks a:hover {
   text-decoration: underline;
 }
+
+
+/* --- Mobile-only adjustments --- */
+@media (max-width: 991.98px) {
+
+  /* Move name slightly to the right */
+  .navbar-brand {
+    margin-left: 0.75rem;
+  }
+
+  .nav-item {
+    margin-left: 0.75rem;
+  }
+
+}

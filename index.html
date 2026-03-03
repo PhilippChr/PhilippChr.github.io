@@ -3,8 +3,15 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Philipp Christmann</title>
-  <meta name="description" content="Personal homepage of Philipp Christmann (PostDoc @ CISPA)" />
+  <title>Philipp Christmann — Postdoctoral Researcher at CISPA</title>
+  <meta name="description" content="Personal homepage of Philipp Christmann (PostDoc @ CISPA), who is working on the interaction of LLMs with tools." />
+  <meta name="robots" content="index,follow" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Philipp Christmann" />
+  <meta property="og:description" content="Postdoctoral researcher at CISPA working on the interaction of LLMs with tools." />
+  <meta property="og:url" content="https://philippchristmann.com" />
+  <meta property="og:image" content="https://philippchristmann.com/assets/img/profile.jpg" />
+  <link rel="canonical" href="https://philippchristmann.com" />
 
   <!-- Bootstrap CSS (CDN) -->
   <link
@@ -29,8 +36,8 @@
 
   <!-- Top bar / header -->
   <header class="border-bottom sticky-top">
-    <nav class="navbar navbar-expand-lg container py-2">
-      <a class="navbar-brand fw-semibold" href="#">Philipp Christmann</a>
+    <nav class="navbar navbar-expand-lg navbar-dark container py-2">
+      <a class="navbar-brand fw-semibold" href="/">Philipp Christmann</a>
 
       <button
         class="navbar-toggler"
@@ -60,17 +67,19 @@
     <section class="row g-4 align-items-start">
 
         <!-- Image -->
-        <div class="col-12 col-md-2 text-center text-md-start">
+        <div class="col-12 col-lg-2 text-center text-lg-start">
             <img 
             src="assets/img/profile.jpg"
             alt="Image of Philipp Christmann"
             class="img-fluid rounded-circle shadow-sm"
             style="max-width: 150px;"
+            loading="lazy"
+            decoding="async" 
             />
         </div>
 
         <!-- Main info -->
-        <div class="col-12 col-md-5">
+        <div class="col-12 col-lg-5">
             <h1 class="display-6 mb-2">Philipp Christmann</h1>
             <p class="lead text-muted mb-3">
             PostDoc @ <a href="https://cispa.de/en" target="_blank" rel="noopener">CISPA</a>
@@ -90,7 +99,7 @@
         </div>
 
         <!-- Contact card -->
-        <div class="col-12 col-md-5">
+        <div class="col-12 col-lg-5">
             <div class="card shadow-sm contact-card">
                 <div class="card-body">
                     <h2 class="h5 card-title mb-3 b">Contact</h2>
@@ -177,6 +186,9 @@
       <div class="mt-3">
         <ol class="publist" id="publist">
           <!-- LOADED VIA JS -->
+          <noscript>
+            <p>Publications are listed on <a href="https://dblp.org/pid/250/2789.html">DBLP</a> and <a href="https://scholar.google.de/citations?user=AS874sUAAAAJ">Google Scholar</a>.</p>
+          </noscript>
         </ol>
       </div>
     </section>
@@ -253,5 +265,33 @@
   
   <!-- Custom JS -->
   <script src="assets/js/site.js"></script>
+
+  <!-- JSON-LD -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Philipp Christmann",
+    "jobTitle": "Postdoctoral Researcher",
+    "affiliation": {
+      "@type": "Organization",
+      "name": "CISPA Helmholtz Center for Information Security",
+      "url": "https://cispa.de/en"
+    },
+    "url": "https://philippchristmann.com/",
+    "image": "https://philippchristmann.com/assets/img/profile.jpg",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Saarbrücken",
+      "addressCountry": "DE"
+    },
+    "sameAs": [
+      "https://scholar.google.de/citations?user=AS874sUAAAAJ",
+      "https://dblp.org/pid/250/2789.html",
+      "https://github.com/PhilippChr",
+      "https://www.linkedin.com/in/philipp-christmann-1577b2191/"
+    ]
+  }
+  </script>
 </body>
 </html>
